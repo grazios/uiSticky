@@ -1,0 +1,16 @@
+extends layout
+block append vars
+  -var title = "Home"
+
+block append styles
+  link(rel="stylesheet" href="/assets/stylesheets/uiSticky.css")
+  
+block append scripts
+  script(src="/assets/libs/angular.js")
+  script(src="/assets/javascripts/ui-sticky.js")
+
+block content
+  div(ng-app="sticky")
+    p(ui-sticky)
+    p(ui-sticky)
+    p(ui-sticky)
