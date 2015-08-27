@@ -8,9 +8,13 @@ block append styles
 block append scripts
   script(src="/assets/libs/angular.js")
   script(src="/assets/javascripts/ui-sticky.js")
+  script(src="/assets/javascripts/hello.js")
 
 block content
-  div(ng-app="sticky")
+  div(ng-app="hello" ng-controller="HelloController as hello")
+    p(ui-sticky)
+      textarea
     p(ui-sticky)
     p(ui-sticky)
-    p(ui-sticky)
+    div(ui-sticky st-config="hello.sticky.config")
+      p(style="width:10px;height:10px;background-color:white" class="ui-sticky-handle")
